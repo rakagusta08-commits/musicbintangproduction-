@@ -1,0 +1,122 @@
+export const translations = {
+  ID: {
+    'nav.home': 'HOME',
+    'nav.about': 'TENTANG',
+    'nav.services': 'LAYANAN',
+    'nav.team': 'TIM',
+    'nav.activities': 'KEGIATAN',
+    'nav.music': 'KARYA MUSIK',
+    'nav.band': 'BINTANG BAND',
+    'nav.contact': 'KONTAK',
+
+    'about.title': 'TENTANG MUSIC BINTANG PRODUCTION',
+    'about.description': 'Music Bintang Production yang bergerak di bidang produksi lagu, label musik, dan manajemen artis. Berdiri dengan semangat untuk melahirkan karya-karya berkualitas tinggi, Music Bintang Production menjadi rumah bagi talenta musik terbaik Indonesia yang siap bersinar di panggung nasional maupun internasional.\n\nKami percaya bahwa setiap nada memiliki cerita, dan setiap artis memiliki cahaya unik. Melalui dukungan profesional dalam produksi, promosi, dan pengembangan karier, kami membantu setiap musisi untuk menemukan dan memancarkan bintangnya sendiri.',
+
+    'focus.title': 'LAYANAN KAMI',
+    'focus.1.title': 'PRODUKSI LAGU',
+    'focus.1.desc': 'Mulai dari penulisan lagu, rekaman, aransemen, hingga mixing dan mastering profesional.',
+    'focus.2.title': 'MANAJEMEN ARTIS',
+    'focus.2.desc': 'Pengembangan karier, penjadwalan, strategi personal branding.',
+    'focus.3.title': 'LABEL MUSIK',
+    'focus.3.desc': 'Distribusi dan promosi musik di berbagai platform digital.',
+    'focus.4.title': 'KONSULTASI KREATIF',
+    'focus.4.desc': 'Bimbingan musik dan strategi promosi bagi artis independen.',
+
+    'showcase.title': 'Galeri Estetika',
+
+    'cta.title': 'MARI NIKMATI KARYA KAMI.',
+    'cta.desc': 'Dengarkan rilisan terbaru kami dan ikuti terus perjalanan musik kami.',
+    'cta.button': 'DENGARKAN SEKARANG',
+
+    'team.page.title': 'PEOPLE / TEAM',
+    'team.page.subtitle': 'Sosok di balik layar Music Bintang Production.',
+    'team.role': 'Peran',
+    'team.viewProfile': 'Lihat Profil \u2192',
+    'team.back': '\u2190 KEMBALI KE DAFTAR TIM',
+    'team.dedicated': 'berdedikasi untuk terus membawa inovasi dan warna baru di industri musik Indonesia. Bersama Music Bintang Production, setiap langkah dan strategi dirancang untuk memastikan karya dan artis yang ditangani mencapai potensi maksimalnya di kancah nasional maupun internasional.',
+
+    'music.page.title': 'MUSIK KAMI',
+    'music.page.subtitle': 'Lagu, cerita, dan melodi.',
+    'music.featured': 'Karya Pilihan',
+    'music.artwork': 'Sampul / Rilis',
+    'music.artist': 'Artis',
+    'music.viewDetails': 'LIHAT DETAIL',
+    'music.open': 'BUKA',
+    'music.back': '\u2190 KEMBALI KE KARYA MUSIK',
+    'music.officialRelease': 'Rilis Resmi',
+    'music.credits': 'Kredit Produksi',
+    'music.producedBy': 'Diproduksi Oleh',
+    'music.arranger': 'Aransemen',
+    'music.mastering': 'Mastering',
+    'music.releaseYear': 'Tahun Rilis',
+
+    'activities.page.title': 'KEGIATAN KAMI',
+    'activities.page.subtitle': 'Dokumentasi proses kreatif dan produksi kami.',
+    'activities.viewDoc': 'Lihat Dokumentasi \u2192',
+    'activities.back': '\u2190 KEMBALI KE DAFTAR KEGIATAN',
+    'activities.docLabel': 'Dokumentasi',
+    'activities.desc1': 'berjalan dengan sukses dan penuh energi. Ini adalah salah satu bukti komitmen Music Bintang Production dalam memberikan hasil terbaik di setiap aspek industri musik, baik di belakang layar maupun di atas panggung.',
+    'activities.desc2': 'Tim kami memastikan setiap detail dipersiapkan secara matang. Melalui kolaborasi yang solid, dedikasi yang tinggi, serta pemanfaatan peralatan berstandar industri, momen ini menjadi langkah penting dalam perjalanan musikal artis dan label kami. Terus pantau website dan media sosial kami untuk update kegiatan selanjutnya!'
+  },
+  EN: {
+    'nav.home': 'HOME',
+    'nav.about': 'ABOUT',
+    'nav.services': 'SERVICES',
+    'nav.team': 'TEAM',
+    'nav.activities': 'ACTIVITIES',
+    'nav.music': 'MUSIC',
+    'nav.band': 'BINTANG BAND',
+    'nav.contact': 'CONTACT',
+
+    'about.title': 'ABOUT MUSIC BINTANG PRODUCTION',
+    'about.description': 'Music Bintang Production operates in music production, record label, and artist management. Founded with a passion to produce high-quality works, Music Bintang Production has become a home for the best musical talents in Indonesia ready to shine on national and international stages.\n\nWe believe that every note has a story, and every artist has a unique light. Through professional support in production, promotion, and career development, we help every musician to discover and radiate their own star.',
+
+    'focus.title': 'OUR SERVICES',
+    'focus.1.title': 'MUSIC PRODUCTION',
+    'focus.1.desc': 'From songwriting, recording, and arrangement, to professional mixing and mastering.',
+    'focus.2.title': 'ARTIST MANAGEMENT',
+    'focus.2.desc': 'Career development, scheduling, and personal branding strategies.',
+    'focus.3.title': 'RECORD LABEL',
+    'focus.3.desc': 'Music distribution and promotion across various digital platforms.',
+    'focus.4.title': 'CREATIVE CONSULTATION',
+    'focus.4.desc': 'Musical guidance and promotion strategies for independent artists.',
+
+    'showcase.title': 'Aesthetic Gallery',
+
+    'cta.title': "LET'S ENJOY THE MUSIC.",
+    'cta.desc': 'Listen to our latest releases and follow our musical journey.',
+    'cta.button': 'LISTEN NOW',
+
+    'team.page.title': 'PEOPLE / TEAM',
+    'team.page.subtitle': 'The figures behind Music Bintang Production.',
+    'team.role': 'Role',
+    'team.viewProfile': 'View Profile \u2192',
+    'team.back': '\u2190 BACK TO TEAM LIST',
+    'team.dedicated': 'is dedicated to continuing to bring innovation and new colors to the Indonesian music industry. With Music Bintang Production, every step and strategy is designed to ensure the works and artists handled reach their maximum potential on national and international stages.',
+
+    'music.page.title': 'OUR MUSIC',
+    'music.page.subtitle': 'Songs, stories and sounds.',
+    'music.featured': 'Featured Work',
+    'music.artwork': 'Artwork / Release',
+    'music.artist': 'Artist',
+    'music.viewDetails': 'VIEW DETAILS',
+    'music.open': 'OPEN',
+    'music.back': '\u2190 BACK TO MUSIC',
+    'music.officialRelease': 'Official Release',
+    'music.credits': 'Production Credits',
+    'music.producedBy': 'Produced By',
+    'music.arranger': 'Arranger',
+    'music.mastering': 'Mastering',
+    'music.releaseYear': 'Release Year',
+
+    'activities.page.title': 'OUR ACTIVITIES',
+    'activities.page.subtitle': 'Documentation of our creative and production processes.',
+    'activities.viewDoc': 'View Documentation \u2192',
+    'activities.back': '\u2190 BACK TO ACTIVITIES',
+    'activities.docLabel': 'Documentation',
+    'activities.desc1': 'ran successfully and full of energy. This is one of the proofs of Music Bintang Production\'s commitment to delivering the best results in every aspect of the music industry, both behind the scenes and on stage.',
+    'activities.desc2': 'Our team ensures every detail is thoroughly prepared. Through solid collaboration, high dedication, and the use of industry-standard equipment, this moment becomes an important step in the musical journey of our artists and label. Keep an eye on our website and social media for the next activity updates!'
+  }
+} as const;
+
+export type TranslationKey = keyof typeof translations.ID;
