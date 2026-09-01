@@ -29,6 +29,11 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: "Music Bintang Production — Music Production, Label & Artist Management",
   description: "Music Bintang Production is a professional music production, label and artist management company.",
+  openGraph: {
+    title: "Music Bintang Production",
+    description: "Music Production, Label & Artist Management",
+    images: [{ url: "/og-image.png" }],
+  },
   icons: {
     icon: "/logo.png",
     shortcut: "/logo.png",
