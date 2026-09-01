@@ -35,10 +35,16 @@ export const metadata: Metadata = {
     description: "Music Production, Label & Artist Management",
     images: [{ url: "/og-image.png" }],
   },
-  icons: {
-    icon: "/logo.png",
-    shortcut: "/logo.png",
-    apple: "/logo.png",
+    icons: {
+    icon: [
+      { url: '/icon.png?v=2' },
+      { url: '/favicon.ico?v=2' }
+    ],
+    shortcut: ['/icon.png?v=2'],
+    apple: [
+      { url: '/apple-touch-icon.png?v=2' },
+      { url: '/icon.png?v=2', sizes: '180x180', type: 'image/png' }
+    ],
   },
 };
 
