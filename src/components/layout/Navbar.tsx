@@ -53,12 +53,12 @@ export const Navbar = () => {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300 w-full max-w-full overflow-hidden",
         isTransparent 
-          ? "bg-dark-slate/40 backdrop-blur-[2px] text-white py-2.5 sm:py-4 md:py-6" 
-          : "bg-dark-slate/95 backdrop-blur-md shadow-md border-b border-white/10 text-white py-2 sm:py-2.5 md:py-3",
+          ? "bg-dark-slate/60 backdrop-blur-md text-white pt-4 pb-3 sm:pt-5 sm:pb-4 md:py-6" 
+          : "bg-dark-slate/95 backdrop-blur-md shadow-lg border-b border-white/10 text-white pt-3.5 pb-3 sm:py-3 md:py-4",
         isHidden ? "-translate-y-full" : "translate-y-0"
       )}
     >
-      <div className="container mx-auto px-3 sm:px-6 lg:px-12 flex items-center justify-between gap-1.5 sm:gap-4 md:gap-8">
+      <div className="container mx-auto px-3 sm:px-6 lg:px-12 flex items-center justify-between gap-2 sm:gap-4 md:gap-8">
         
         {/* LOGO */}
         <Link href="/" className="flex items-center shrink-0 group">
@@ -66,16 +66,16 @@ export const Navbar = () => {
             className={cn(
               "relative overflow-hidden group-hover:scale-105 transition-all duration-300 origin-left",
               isScrolled 
-                ? "w-8 h-8 xs:w-9 xs:h-9 sm:w-14 sm:h-14 md:w-16 md:h-16" 
-                : "w-9 h-9 xs:w-10 xs:h-10 sm:w-16 sm:h-16 md:w-20 md:h-20"
+                ? "w-10 h-10 xs:w-11 xs:h-11 sm:w-14 sm:h-14 md:w-16 md:h-16" 
+                : "w-11 h-11 xs:w-12 xs:h-12 sm:w-16 sm:h-16 md:w-20 md:h-20"
             )}
           >
             <Image 
-              src="/logo.png" 
+              src="/newlogo.png" 
               alt="Music Bintang Production Logo" 
               fill
               priority
-              sizes="(max-width: 640px) 40px, (max-width: 768px) 64px, 80px"
+              sizes="(max-width: 640px) 48px, (max-width: 768px) 64px, 80px"
               className="object-contain drop-shadow-2xl"
             />
           </div>
@@ -90,15 +90,15 @@ export const Navbar = () => {
                 key={link.href}
                 href={link.href}
                 className={cn(
-                  "font-display text-[11px] xs:text-xs sm:text-sm md:text-lg lg:text-xl tracking-wider sm:tracking-[0.1em] uppercase font-bold whitespace-nowrap transition-all py-1 px-1 sm:px-2 rounded hover:text-mustard-gold flex flex-col items-center",
+                  "font-display text-[12px] xs:text-[13px] sm:text-sm md:text-lg lg:text-xl tracking-wider sm:tracking-[0.1em] uppercase font-extrabold whitespace-nowrap transition-all py-1.5 px-1 sm:px-2 rounded hover:text-mustard-gold flex flex-col items-center",
                   isActive 
-                    ? "text-mustard-gold" 
-                    : "text-white/85 hover:text-white"
+                    ? "text-mustard-gold scale-105" 
+                    : "text-white/90 hover:text-white"
                 )}
               >
                 <span>{link.label}</span>
                 {isActive && (
-                  <span className="block h-0.5 w-full mt-0.5 bg-mustard-gold rounded-full" />
+                  <span className="block h-[2.5px] w-full mt-1 bg-mustard-gold rounded-full" />
                 )}
               </Link>
             );
@@ -106,7 +106,7 @@ export const Navbar = () => {
         </nav>
 
         {/* LANGUAGE SWITCHER */}
-        <div className="flex items-center shrink-0 pl-1.5 sm:pl-2 border-l border-white/10 sm:border-transparent">
+        <div className="flex items-center shrink-0 pl-1.5 sm:pl-3 border-l border-white/15 sm:border-transparent">
           <LanguageSwitcher />
         </div>
 

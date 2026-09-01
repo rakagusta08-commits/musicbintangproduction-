@@ -30,21 +30,20 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://musicbintangproduction.vercel.app'),
   title: "Music Bintang Production — Music Production, Label & Artist Management",
   description: "Music Bintang Production is a professional music production, label and artist management company.",
+  icons: {
+    icon: [
+      { url: "/newlogo.png", type: "image/png" },
+      { url: "/favicon.ico" },
+    ],
+    shortcut: "/newlogo.png",
+    apple: [
+      { url: "/newlogo.png", sizes: "180x180", type: "image/png" }
+    ],
+  },
   openGraph: {
     title: "Music Bintang Production",
     description: "Music Production, Label & Artist Management",
-    images: [{ url: "/og-image.png" }],
-  },
-    icons: {
-    icon: [
-      { url: '/icon.png?v=2' },
-      { url: '/favicon.ico?v=2' }
-    ],
-    shortcut: ['/icon.png?v=2'],
-    apple: [
-      { url: '/apple-touch-icon.png?v=2' },
-      { url: '/icon.png?v=2', sizes: '180x180', type: 'image/png' }
-    ],
+    images: [{ url: "/newlogo.png" }],
   },
 };
 
@@ -55,6 +54,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="id" className={`${montserrat.variable} ${inter.variable}`}>
+      <head>
+        <link rel="icon" href="/newlogo.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/newlogo.png" />
+      </head>
       <body className="antialiased font-body bg-background text-foreground overflow-x-hidden min-h-screen flex flex-col">
         <LanguageProvider>
           <Navbar />
