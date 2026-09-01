@@ -9,8 +9,8 @@ import { music } from '@/data/music';
 import Link from 'next/link';
 
 const fadeUpVariant: Variants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+  hidden: { opacity: 0, y: 15 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } }
 };
 
 const staggerContainer: Variants = {
@@ -18,7 +18,7 @@ const staggerContainer: Variants = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.15
+      staggerChildren: 0.1
     }
   }
 };
@@ -75,21 +75,19 @@ export default function Home() {
             </span>
           </h1>
         </motion.div>
-
-        
       </section>
 
       {/* AESTHETIC INTRO / ABOUT SECTION */}
-      <section id="tentang" className="py-12 sm:py-20 md:py-28 bg-pure-white overflow-hidden relative">
-        <div className="container mx-auto px-4 sm:px-6 relative z-10 max-w-6xl">
-          <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
+      <section id="tentang" className="py-10 sm:py-16 md:py-24 bg-pure-white overflow-hidden relative">
+        <div className="container mx-auto px-4 sm:px-6 relative z-10 max-w-5xl">
+          <div className="grid md:grid-cols-2 gap-6 md:gap-12 items-center">
             {/* Left: Studio Image */}
             <motion.div 
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.6, ease: "easeOut" }}
-              className="relative aspect-[4/3] sm:aspect-square w-full rounded-2xl overflow-hidden shadow-lg group max-w-sm sm:max-w-md mx-auto"
+              className="relative aspect-[4/3] sm:aspect-square w-full rounded-2xl overflow-hidden shadow-md group max-w-xs sm:max-w-sm mx-auto"
             >
               <div className="absolute inset-0 bg-dark-slate overflow-hidden">
                 <div className="absolute inset-0 bg-[url('/images/studio.jpg')] bg-cover bg-center group-hover:scale-105 transition-transform duration-700" />
@@ -97,8 +95,8 @@ export default function Home() {
               
               <div className="absolute inset-3 sm:inset-4 border border-white/20 rounded-xl z-10 pointer-events-none" />
               
-              <div className="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 z-20">
-                <span className="bg-mustard-gold text-dark-slate font-bold px-3 py-1.5 sm:px-4 sm:py-2 text-[10px] sm:text-xs tracking-widest uppercase rounded-sm shadow-md">
+              <div className="absolute bottom-3 left-3 sm:bottom-4 sm:left-4 z-20">
+                <span className="bg-mustard-gold text-dark-slate font-bold px-2.5 py-1 sm:px-3 sm:py-1.5 text-[9px] sm:text-[10px] tracking-widest uppercase rounded-sm shadow-md">
                   Music Bintang
                 </span>
               </div>
@@ -114,18 +112,18 @@ export default function Home() {
             >
               <motion.h2 
                 variants={fadeUpVariant} 
-                className="font-display text-2xl sm:text-4xl md:text-5xl font-black text-dark-slate mb-4 sm:mb-6 uppercase tracking-tight leading-tight"
+                className="font-display text-xl sm:text-3xl md:text-4xl font-black text-dark-slate mb-3 sm:mb-4 uppercase tracking-tight leading-tight"
               >
                 {t('about.title')}
               </motion.h2>
               
-              <motion.div variants={fadeUpVariant} className="mb-4 sm:mb-6">
-                <div className="w-12 sm:w-16 h-1.5 bg-mustard-gold rounded-full"></div>
+              <motion.div variants={fadeUpVariant} className="mb-3 sm:mb-4">
+                <div className="w-10 sm:w-12 h-1 bg-mustard-gold rounded-full"></div>
               </motion.div>
 
               <motion.p 
                 variants={fadeUpVariant} 
-                className="text-sm sm:text-base md:text-lg font-body text-dark-slate/80 leading-relaxed whitespace-pre-line"
+                className="text-xs sm:text-sm md:text-base font-body text-dark-slate/80 leading-relaxed whitespace-pre-line"
               >
                 {t('about.description')}
               </motion.p>
@@ -135,16 +133,16 @@ export default function Home() {
       </section>
 
       {/* LATEST RELEASES (CAROUSEL) */}
-      <section className="py-12 sm:py-16 md:py-20 bg-dark-slate overflow-hidden border-t border-white/5">
-        <div className="container mx-auto px-4 sm:px-6 mb-6 sm:mb-10">
-           <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-black text-pure-white uppercase tracking-tight">
+      <section className="py-10 sm:py-14 md:py-18 bg-dark-slate overflow-hidden border-t border-white/5">
+        <div className="container mx-auto px-4 sm:px-6 mb-4 sm:mb-8 max-w-5xl">
+           <h2 className="font-display text-xl sm:text-2xl md:text-3xl font-black text-pure-white uppercase tracking-tight">
              {language === 'ID' ? 'RILISAN TERBARU' : 'LATEST RELEASES'}
            </h2>
         </div>
         
-        <div className="w-full overflow-hidden pb-2 sm:pb-6 relative group">
+        <div className="w-full overflow-hidden pb-2 sm:pb-4 relative group">
           <motion.div 
-            className="flex gap-3 sm:gap-6 w-max"
+            className="flex gap-3 sm:gap-5 w-max"
             animate={{ x: [0, "-50%"] }}
             transition={{ ease: "linear", duration: 30, repeat: Infinity }}
             style={{ animationPlayState: "inherit" }}
@@ -152,7 +150,7 @@ export default function Home() {
             {[...music, ...music].map((item, i) => (
               <div 
                 key={`${item.id}-${i}`} 
-                className="w-44 sm:w-64 lg:w-72 flex-shrink-0 relative group/card"
+                className="w-40 sm:w-56 lg:w-64 flex-shrink-0 relative group/card"
               >
                 <Link href={`/karya-musik/${item.id}`} className="block">
                   <div className="aspect-square bg-dark-slate overflow-hidden relative border border-white/10 rounded-xl">
@@ -165,9 +163,9 @@ export default function Home() {
                        <div className="absolute inset-0 bg-gradient-to-br from-mustard-gold to-logo-red opacity-80 group-hover/card:scale-105 transition-transform duration-700" />
                      )}
                      
-                     <div className="absolute inset-0 flex flex-col justify-end p-3 sm:p-4 bg-gradient-to-t from-black/85 via-black/30 to-transparent">
-                        <span className="font-display text-white text-xs sm:text-base font-bold uppercase line-clamp-1">{item.title}</span>
-                        <span className="text-mustard-gold font-bold uppercase tracking-widest text-[9px] sm:text-xs mt-0.5">{item.artistName}</span>
+                     <div className="absolute inset-0 flex flex-col justify-end p-2.5 sm:p-3.5 bg-gradient-to-t from-black/85 via-black/30 to-transparent">
+                        <span className="font-display text-white text-xs sm:text-sm font-bold uppercase line-clamp-1">{item.title}</span>
+                        <span className="text-mustard-gold font-bold uppercase tracking-widest text-[9px] sm:text-[10px] mt-0.5">{item.artistName}</span>
                      </div>
                   </div>
                 </Link>
@@ -178,31 +176,31 @@ export default function Home() {
       </section>
 
       {/* ARTIS MBP SECTION */}
-      <section className="py-12 sm:py-20 md:py-28 bg-pure-white overflow-hidden">
+      <section className="py-10 sm:py-16 md:py-24 bg-pure-white overflow-hidden">
         <motion.div 
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-50px" }}
           variants={staggerContainer}
-          className="container mx-auto px-4 sm:px-6"
+          className="container mx-auto px-4 sm:px-6 max-w-5xl"
         >
-          <motion.div variants={fadeUpVariant} className="flex justify-between items-end mb-6 sm:mb-12 max-w-6xl mx-auto">
-            <h2 className="font-display text-2xl sm:text-4xl md:text-5xl font-black text-dark-slate uppercase tracking-tight">
+          <motion.div variants={fadeUpVariant} className="flex justify-between items-end mb-4 sm:mb-8">
+            <h2 className="font-display text-xl sm:text-3xl md:text-4xl font-black text-dark-slate uppercase tracking-tight">
               {language === 'ID' ? 'ARTIS KAMI' : 'OUR ARTISTS'}
             </h2>
-            <div className="w-20 sm:w-28 h-[2px] bg-mustard-gold hidden md:block"></div>
+            <div className="w-16 sm:w-20 h-[2px] bg-mustard-gold hidden md:block"></div>
           </motion.div>
           
-          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6 max-w-6xl mx-auto">
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-4 md:gap-5">
             {artists.map((artist, index) => (
               <Link href={`/artis/${artist.id}`} key={artist.id} className="group block cursor-pointer">
                 <motion.div 
                   variants={fadeUpVariant} 
-                  className="relative aspect-[3/4] w-full rounded-xl sm:rounded-2xl overflow-hidden bg-dark-slate shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+                  className="relative aspect-[3/4] w-full rounded-xl sm:rounded-2xl overflow-hidden bg-dark-slate shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-0.5"
                 >
                   <div className="absolute inset-0 bg-gradient-to-br from-dark-slate via-dark-grey to-black opacity-100 group-hover:scale-105 transition-transform duration-500 ease-out" />
                   
-                  <div className={`absolute -top-20 -right-20 w-40 h-40 rounded-full blur-2xl opacity-20 group-hover:opacity-50 transition-opacity duration-500 ${index % 2 === 0 ? 'bg-mustard-gold' : 'bg-logo-red'}`} />
+                  <div className={`absolute -top-20 -right-20 w-32 h-32 rounded-full blur-2xl opacity-20 group-hover:opacity-40 transition-opacity duration-500 ${index % 2 === 0 ? 'bg-mustard-gold' : 'bg-logo-red'}`} />
 
                   {artist.image ? (
                     <div 
@@ -214,17 +212,17 @@ export default function Home() {
                     />
                   ) : (
                     <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                      <span className="font-display text-6xl sm:text-8xl font-black text-white/5 uppercase drop-shadow-xl">
+                      <span className="font-display text-5xl sm:text-6xl font-black text-white/5 uppercase drop-shadow-xl">
                         {artist.name[0]}
                       </span>
                     </div>
                   )}
 
-                  <div className="absolute inset-x-0 bottom-0 p-3 sm:p-5 flex flex-col justify-end bg-gradient-to-t from-black/95 via-black/50 to-transparent">
-                    <p className="text-mustard-gold font-bold tracking-widest text-[9px] sm:text-xs uppercase mb-0.5 sm:mb-1">
+                  <div className="absolute inset-x-0 bottom-0 p-2.5 sm:p-3.5 flex flex-col justify-end bg-gradient-to-t from-black/95 via-black/50 to-transparent">
+                    <p className="text-mustard-gold font-bold tracking-widest text-[8px] sm:text-[10px] uppercase mb-0.5">
                       {language === 'ID' ? artist.role.id : artist.role.en}
                     </p>
-                    <h3 className="font-display text-xs sm:text-base md:text-lg font-bold text-pure-white uppercase tracking-wider line-clamp-1 group-hover:text-mustard-gold transition-colors">
+                    <h3 className="font-display text-[11px] xs:text-xs sm:text-sm md:text-base font-bold text-pure-white uppercase tracking-wider line-clamp-1 group-hover:text-mustard-gold transition-colors">
                       {artist.name}
                     </h3>
                   </div>
@@ -235,8 +233,8 @@ export default function Home() {
             ))}
           </div>
           
-          <motion.div variants={fadeUpVariant} className="mt-8 sm:mt-12 text-center">
-             <Link href="/artis" className="inline-block border border-dark-slate text-dark-slate px-6 sm:px-8 py-2.5 sm:py-3 font-bold uppercase tracking-wider hover:bg-dark-slate hover:text-white transition-colors text-xs sm:text-sm rounded-full">
+          <motion.div variants={fadeUpVariant} className="mt-6 sm:mt-10 text-center">
+             <Link href="/artis" className="inline-block border border-dark-slate text-dark-slate px-5 sm:px-7 py-2 sm:py-2.5 font-bold uppercase tracking-wider hover:bg-dark-slate hover:text-white transition-colors text-xs rounded-full">
                {language === 'ID' ? 'Lihat Semua Artis' : 'View All Artists'}
              </Link>
           </motion.div>

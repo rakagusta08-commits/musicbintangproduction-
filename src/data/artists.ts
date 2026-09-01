@@ -2,8 +2,8 @@ import { Artist } from '@/types';
 
 export const artists: Artist[] = [
   {
-    id: 'bintang-band',
-    name: 'BINTANG BAND',
+    id: 'akda09',
+    name: 'AKDA09',
     role: {
       id: 'Grup Band',
       en: 'Music Band'
@@ -14,7 +14,6 @@ export const artists: Artist[] = [
     },
     image: '/images/bandmbp.jpg'
   },
-
   {
     id: 'bintang-putra-sugiatno',
     name: 'BINTANG PUTRA SUGIATNO',
