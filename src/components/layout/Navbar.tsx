@@ -57,9 +57,9 @@ export const Navbar = () => {
         isHidden ? "-translate-y-full" : "translate-y-0"
       )}
     >
-      <div className="container mx-auto px-3 sm:px-6 lg:px-12 flex items-center justify-between gap-2 sm:gap-4 md:gap-8">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-12 flex items-center justify-between gap-2 sm:gap-4 md:gap-8">
         
-        {/* LOGO */}
+        {/* LOGO (LEFT) */}
         <Link href="/" className="flex items-center shrink-0 group">
           <div 
             className={cn(
@@ -80,8 +80,8 @@ export const Navbar = () => {
           </div>
         </Link>
 
-        {/* ALWAYS-VISIBLE HORIZONTAL NAV MENU */}
-        <nav className="flex items-center justify-center gap-2 xs:gap-3 sm:gap-6 md:gap-8 flex-nowrap">
+        {/* CENTERED HORIZONTAL NAV MENU (PERFECT DEAD CENTER) */}
+        <nav className="flex-1 flex items-center justify-center gap-3 xs:gap-4 sm:gap-8 md:gap-12 flex-nowrap">
           {links.map((link) => {
             const isActive = pathname === link.href || (link.href !== '/' && pathname.startsWith(link.href));
             return (
@@ -89,9 +89,9 @@ export const Navbar = () => {
                 key={link.href}
                 href={link.href}
                 className={cn(
-                  "font-display text-[10.5px] xs:text-[11.5px] sm:text-sm md:text-base lg:text-lg tracking-wider sm:tracking-[0.1em] uppercase font-bold whitespace-nowrap transition-all py-1 px-1 sm:px-2 rounded hover:text-mustard-gold flex flex-col items-center",
+                  "font-display text-[11px] xs:text-[12px] sm:text-sm md:text-base lg:text-lg tracking-wider sm:tracking-[0.12em] uppercase font-bold whitespace-nowrap transition-all py-1 px-1 sm:px-2 rounded hover:text-mustard-gold flex flex-col items-center",
                   isActive 
-                    ? "text-mustard-gold" 
+                    ? "text-mustard-gold scale-105" 
                     : "text-white/85 hover:text-white"
                 )}
               >
@@ -103,6 +103,14 @@ export const Navbar = () => {
             );
           })}
         </nav>
+
+        {/* RIGHT SPACER BALANCER (Symmetrical balance with logo on desktop) */}
+        <div 
+          className={cn(
+            "shrink-0 hidden md:block pointer-events-none",
+            isScrolled ? "w-16" : "w-18"
+          )} 
+        />
 
       </div>
     </header>
