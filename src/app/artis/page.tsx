@@ -58,8 +58,11 @@ export default function ArtisPage() {
                   {/* Artist Image or Initial Placeholder */}
                   {artist.image ? (
                     <div 
-                      className="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-700 z-0"
-                      style={{ backgroundImage: `url(${artist.image})` }}
+                      className="absolute inset-0 bg-cover group-hover:scale-110 transition-transform duration-700 z-0"
+                      style={{ 
+                        backgroundImage: `url(${artist.image})`,
+                        backgroundPosition: artist.imagePosition || 'center'
+                      }}
                     />
                   ) : (
                     <>

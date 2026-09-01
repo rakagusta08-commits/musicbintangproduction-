@@ -93,10 +93,8 @@ export default function Home() {
               transition={{ duration: 0.8, ease: "easeOut" }}
               className="relative aspect-[4/5] md:aspect-square w-full rounded-2xl overflow-hidden shadow-2xl group"
             >
-              <div className="absolute inset-0 bg-dark-slate">
-                {/* Temporary placeholder background - can be replaced with real image later */}
-                <div className="absolute inset-0 bg-[url('/images/beground.png')] bg-cover bg-center opacity-40 mix-blend-luminosity group-hover:scale-105 transition-transform duration-700" />
-                <div className="absolute inset-0 bg-gradient-to-tr from-mustard-gold/20 to-logo-red/20 mix-blend-overlay" />
+              <div className="absolute inset-0 bg-dark-slate overflow-hidden">
+                <div className="absolute inset-0 bg-[url('/images/studio.jpg')] bg-cover bg-center group-hover:scale-105 transition-transform duration-700" />
               </div>
               
               {/* Optional aesthetic frame/overlay */}

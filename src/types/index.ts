@@ -23,6 +23,18 @@ export type Artist = {
   role: { id: string; en: string }; // e.g., "Singer-Songwriter", "Band"
   description: { id: string; en: string };
   image?: string; // Optional image path
+  imagePosition?: string; // Optional CSS background position
+  social?: {
+    instagram?: string;
+    tiktok?: string;
+    youtube?: string;
+    spotify?: string;
+  };
+  news?: {
+    id: string;
+    title: string;
+    url: string;
+  }[];
 };
 
 export type MusicWork = {
