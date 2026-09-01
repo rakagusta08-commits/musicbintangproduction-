@@ -27,6 +27,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://musicbintangproduction.vercel.app'),
   title: "Music Bintang Production — Music Production, Label & Artist Management",
   description: "Music Bintang Production is a professional music production, label and artist management company.",
   openGraph: {
