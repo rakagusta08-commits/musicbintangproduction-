@@ -28,10 +28,10 @@ export default function Home() {
 
   return (
     <PageTransition>
-      {/* EXCLUSIVE HERO SECTION */}
-      <section className="relative min-h-[85vh] sm:min-h-screen flex items-center justify-center overflow-hidden bg-dark-slate text-pure-white pt-16 pb-8">
+      {/* EXCLUSIVE HERO SECTION (FULL SCREEN) */}
+      <section className="relative min-h-[100svh] h-[100dvh] flex flex-col items-center justify-center overflow-hidden bg-dark-slate text-pure-white px-4 pt-16 pb-12">
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-b from-dark-slate/80 via-dark-slate/40 to-dark-slate z-10" />
+          <div className="absolute inset-0 bg-gradient-to-b from-dark-slate/80 via-dark-slate/30 to-dark-slate z-10" />
           <div className="absolute inset-0 bg-[url('/images/beground.png')] bg-cover bg-center opacity-30 mix-blend-luminosity scale-105 animate-[pulse_10s_ease-in-out_infinite]" />
         </div>
         
@@ -42,7 +42,7 @@ export default function Home() {
             hidden: { opacity: 0 },
             visible: { opacity: 1, transition: { staggerChildren: 0.04, delayChildren: 0.1 } }
           }}
-          className="relative z-20 container mx-auto px-4 text-center flex flex-col items-center justify-center"
+          className="relative z-20 container mx-auto text-center flex flex-col items-center justify-center my-auto"
         >
           <h1 className="font-display text-[1.85rem] xs:text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-black uppercase text-mustard-gold drop-shadow-2xl leading-tight">
             <span className="block whitespace-nowrap overflow-hidden pb-1 sm:pb-2">
@@ -74,6 +74,23 @@ export default function Home() {
               ))}
             </span>
           </h1>
+        </motion.div>
+
+        {/* SUBTLE SCROLL PROMPT */}
+        <motion.div 
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.8, duration: 0.8 }}
+          className="relative z-20 flex flex-col items-center gap-1.5 pointer-events-none mt-auto"
+        >
+          <span className="text-[9px] sm:text-[10px] uppercase tracking-widest text-mustard-gold font-bold">Scroll Down</span>
+          <div className="w-4 h-6 sm:w-5 sm:h-8 rounded-full border border-white/25 flex items-start justify-center p-1">
+            <motion.div 
+              animate={{ y: [0, 8, 0] }}
+              transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+              className="w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full bg-mustard-gold"
+            />
+          </div>
         </motion.div>
       </section>
 
