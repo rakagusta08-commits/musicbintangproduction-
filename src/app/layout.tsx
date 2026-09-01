@@ -29,7 +29,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL('https://musicbintangproduction.vercel.app'),
   title: "Music Bintang Production — Music Production, Label & Artist Management",
-  description: "Music Bintang Production is a professional music production, label and artist management company.",
+  description: "Music Bintang Production adalah label rekaman, studio produksi musik, dan manajemen artis profesional di Indonesia.",
   icons: {
     icon: [
       { url: "/newlogo.png", type: "image/png" },
@@ -41,9 +41,26 @@ export const metadata: Metadata = {
     ],
   },
   openGraph: {
+    type: "website",
+    locale: "id_ID",
+    url: "https://musicbintangproduction.vercel.app",
+    siteName: "Music Bintang Production",
+    title: "Music Bintang Production — Record Label & Artist Management",
+    description: "Rumah produksi musik, label rekaman, dan manajemen artis terkemuka di Indonesia.",
+    images: [
+      {
+        url: "https://musicbintangproduction.vercel.app/newlogo.png",
+        width: 1200,
+        height: 630,
+        alt: "Music Bintang Production",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
     title: "Music Bintang Production",
-    description: "Music Production, Label & Artist Management",
-    images: [{ url: "/newlogo.png" }],
+    description: "Rumah produksi musik, label rekaman, dan manajemen artis.",
+    images: ["https://musicbintangproduction.vercel.app/newlogo.png"],
   },
 };
 
@@ -57,6 +74,11 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/newlogo.png" type="image/png" />
         <link rel="apple-touch-icon" href="/newlogo.png" />
+        <meta property="og:image" content="https://musicbintangproduction.vercel.app/newlogo.png" />
+        <meta property="og:image:secure_url" content="https://musicbintangproduction.vercel.app/newlogo.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
       </head>
       <body className="antialiased font-body bg-background text-foreground overflow-x-hidden min-h-screen flex flex-col">
         <LanguageProvider>
