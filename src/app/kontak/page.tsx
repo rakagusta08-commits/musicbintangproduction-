@@ -29,7 +29,7 @@ export default function KontakPage() {
     {
       id: 'whatsapp',
       title: 'WhatsApp',
-      icon: <WhatsAppIcon className="w-8 h-8" />,
+      icon: <WhatsAppIcon className="w-7 h-7 sm:w-8 sm:h-8" />,
       value: company.contact.phone,
       desc: 'Hubungi kami via WhatsApp untuk respon cepat.',
       href: `https://wa.me/${company.contact.phone.replace(/[^0-9]/g, '')}`,
@@ -40,7 +40,7 @@ export default function KontakPage() {
     {
       id: 'email',
       title: 'Email',
-      icon: <Mail className="w-8 h-8" />,
+      icon: <Mail className="w-7 h-7 sm:w-8 sm:h-8" />,
       value: company.contact.email,
       desc: 'Kirimkan pesan elektronik untuk keperluan bisnis.',
       href: `mailto:${company.contact.email}`,
@@ -51,7 +51,7 @@ export default function KontakPage() {
     {
       id: 'instagram',
       title: 'Instagram',
-      icon: <InstagramIcon className="w-8 h-8" />,
+      icon: <InstagramIcon className="w-7 h-7 sm:w-8 sm:h-8" />,
       value: '@musicbintang_production',
       desc: 'Ikuti update dan karya terbaru kami.',
       href: 'https://www.instagram.com/musicbintang_production/',
@@ -63,42 +63,42 @@ export default function KontakPage() {
 
   return (
     <PageTransition>
-      <div className="pt-32 pb-0 bg-dark-slate min-h-screen flex flex-col text-white relative overflow-hidden">
+      <div className="pt-20 sm:pt-28 md:pt-32 pb-0 bg-dark-slate min-h-screen flex flex-col text-white relative overflow-hidden">
         
         {/* Background Decorations */}
-        <div className="absolute top-1/4 left-0 w-[500px] h-[500px] bg-mustard-gold/5 rounded-full blur-[120px] pointer-events-none" />
-        <div className="absolute bottom-1/4 right-0 w-[600px] h-[600px] bg-logo-red/5 rounded-full blur-[150px] pointer-events-none" />
+        <div className="absolute top-1/4 left-0 w-[300px] sm:w-[500px] h-[300px] sm:h-[500px] bg-mustard-gold/5 rounded-full blur-[100px] pointer-events-none" />
+        <div className="absolute bottom-1/4 right-0 w-[300px] sm:w-[600px] h-[300px] sm:h-[600px] bg-logo-red/5 rounded-full blur-[120px] pointer-events-none" />
 
-        <section className="py-20 md:py-32 container mx-auto px-6 max-w-6xl flex-grow flex flex-col justify-center relative z-10">
+        <section className="py-12 sm:py-16 md:py-24 container mx-auto px-4 sm:px-6 max-w-6xl flex-grow flex flex-col justify-center relative z-10">
           
-          <div className="text-center mb-20">
-            <h1 className="font-display text-5xl md:text-7xl font-extrabold text-pure-white mb-6 uppercase tracking-tight">
+          <div className="text-center mb-12 sm:mb-16">
+            <h1 className="font-display text-4xl sm:text-6xl md:text-7xl font-extrabold text-pure-white mb-4 sm:mb-6 uppercase tracking-tight">
               Mari <span className="text-mustard-gold">Berbincang</span>
             </h1>
-            <p className="text-xl md:text-2xl text-pure-white/70 font-body max-w-2xl mx-auto">
+            <p className="text-base sm:text-xl text-pure-white/70 font-body max-w-2xl mx-auto">
               Punya ide karya atau pertanyaan tentang layanan kami? Jangan ragu untuk menghubungi tim {company.name}.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
             {contactMethods.map((method) => (
               <a
                 key={method.id}
                 href={method.href}
                 target="_blank"
                 rel="noreferrer"
-                className={`group flex flex-col items-center text-center bg-pure-white/5 backdrop-blur-md border border-white/10 p-10 rounded-3xl transition-all duration-500 ease-out hover:-translate-y-2 ${method.glow} ${method.border}`}
+                className={`group flex flex-col items-center text-center bg-pure-white/5 backdrop-blur-md border border-white/10 p-6 sm:p-8 md:p-10 rounded-2xl sm:rounded-3xl transition-all duration-500 ease-out hover:-translate-y-1.5 ${method.glow} ${method.border}`}
               >
-                <div className={`w-20 h-20 rounded-full bg-dark-slate border border-white/10 flex items-center justify-center mb-6 text-white/50 transition-colors duration-500 ${method.hoverColor}`}>
+                <div className={`w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-dark-slate border border-white/10 flex items-center justify-center mb-4 sm:mb-6 text-white/60 transition-colors duration-500 ${method.hoverColor}`}>
                   {method.icon}
                 </div>
-                <h3 className="font-display text-2xl font-bold text-white mb-3 tracking-wide">
+                <h3 className="font-display text-xl sm:text-2xl font-bold text-white mb-2 sm:mb-3 tracking-wide">
                   {method.title}
                 </h3>
-                <p className="text-mustard-gold font-medium text-lg mb-4 truncate w-full px-4">
+                <p className="text-mustard-gold font-medium text-base sm:text-lg mb-2 sm:mb-4 truncate w-full px-2">
                   {method.value}
                 </p>
-                <p className="text-white/60 font-body text-sm leading-relaxed max-w-xs">
+                <p className="text-white/60 font-body text-xs sm:text-sm leading-relaxed max-w-xs">
                   {method.desc}
                 </p>
               </a>
@@ -108,18 +108,18 @@ export default function KontakPage() {
         </section>
 
         {/* TECHNICAL RIDER SECTION */}
-        <section className="py-20 bg-dark-slate/50 relative z-10 border-t border-white/10">
-          <div className="container mx-auto px-6 max-w-5xl">
-            <div className="text-center mb-12">
-              <h2 className="font-display text-4xl md:text-5xl font-extrabold text-pure-white uppercase tracking-tight mb-4">
+        <section className="py-12 sm:py-20 bg-dark-slate/50 relative z-10 border-t border-white/10">
+          <div className="container mx-auto px-4 sm:px-6 max-w-5xl">
+            <div className="text-center mb-8 sm:mb-12">
+              <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-extrabold text-pure-white uppercase tracking-tight mb-3 sm:mb-4">
                 Technical <span className="text-mustard-gold">Rider</span>
               </h2>
-              <p className="text-white/70 font-body max-w-2xl mx-auto">
+              <p className="text-white/70 font-body text-sm sm:text-base max-w-2xl mx-auto">
                 Spesifikasi teknis standar untuk keperluan pertunjukan artis Music Bintang Production.
               </p>
             </div>
             
-            <div className="bg-white rounded-3xl p-8 md:p-12 shadow-2xl text-dark-slate">
+            <div className="bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-8 md:p-12 shadow-2xl text-dark-slate overflow-hidden">
               <TechnicalTable 
                 title="CHANNEL LIST" 
                 data={technicalRider.channels} 

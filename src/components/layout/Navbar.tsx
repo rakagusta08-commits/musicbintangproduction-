@@ -24,10 +24,10 @@ export const Navbar = () => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
       
-      setIsScrolled(currentScrollY > 50);
+      setIsScrolled(currentScrollY > 40);
 
-      // Hide if scrolling down past 100px, show if scrolling up
-      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+      // Hide if scrolling down past 120px, show if scrolling up
+      if (currentScrollY > lastScrollY && currentScrollY > 120) {
         setIsHidden(true);
       } else {
         setIsHidden(false);
@@ -56,22 +56,24 @@ export const Navbar = () => {
       <header
         className={cn(
           "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-          isTransparent ? "bg-transparent text-white py-6" : "bg-dark-slate/95 backdrop-blur-md shadow-sm border-b border-white/10 text-white py-3",
+          isTransparent ? "bg-gradient-to-b from-black/60 to-transparent text-white py-4 md:py-6" : "bg-dark-slate/95 backdrop-blur-md shadow-md border-b border-white/10 text-white py-3",
           isHidden && !isMobileOpen ? "-translate-y-full" : "translate-y-0"
         )}
       >
-        <div className="container mx-auto px-6 lg:px-12 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-4 z-50 group">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-12 flex items-center justify-between">
+          <Link href="/" className="flex items-center gap-3 z-50 group">
             <div 
               className={cn(
-                "relative overflow-hidden group-hover:scale-110 transition-all duration-300 origin-left",
-                isScrolled ? "w-14 h-14 md:w-20 md:h-20" : "w-16 h-16 md:w-28 md:h-28"
+                "relative overflow-hidden group-hover:scale-105 transition-all duration-300 origin-left",
+                isScrolled ? "w-12 h-12 md:w-16 md:h-16" : "w-14 h-14 md:w-20 md:h-20"
               )}
             >
               <Image 
                 src="/logo.png" 
                 alt="Music Bintang Production Logo" 
                 fill
+                priority
+                sizes="(max-width: 768px) 56px, 80px"
                 className="object-contain drop-shadow-2xl"
               />
             </div>
@@ -103,14 +105,14 @@ export const Navbar = () => {
           </div>
 
           <button
-            className="lg:hidden z-50 p-2 -mr-2"
+            className="lg:hidden z-50 p-2 text-white hover:text-mustard-gold transition-colors focus:outline-none"
             onClick={() => setIsMobileOpen(!isMobileOpen)}
             aria-label="Toggle Menu"
           >
             {isMobileOpen ? (
-              <X className={isMobileOpen ? "text-white" : "text-current"} />
+              <X size={28} className="text-mustard-gold" />
             ) : (
-              <Menu className="text-current" />
+              <Menu size={28} />
             )}
           </button>
         </div>
