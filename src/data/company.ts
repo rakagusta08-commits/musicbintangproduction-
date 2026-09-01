@@ -10,7 +10,7 @@ export const company: Company = {
     "membangun jaringan kolaboratif antara musisi, produser, dan pelaku industri kreatif."
   ],
   contact: {
-    phone: "+62 821-1550-0341",
+    phone: "+62 831-9175-3436",
     email: "musicbintangproduction@gmail.com",
     address: "Jl. Riung Purna 9. No. 13\nKomplek Riung Bandung"
   }
