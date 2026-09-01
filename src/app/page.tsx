@@ -3,13 +3,9 @@
 import { PageTransition } from '@/components/ui/PageTransition';
 import { CTASection } from '@/components/sections/CTASection';
 import { useLanguage } from '@/lib/LanguageContext';
-import { motion, Variants, AnimatePresence } from 'framer-motion';
-import { useState } from 'react';
-import { services } from '@/data/services';
-import { Service } from '@/types';
+import { motion, Variants } from 'framer-motion';
 import { artists } from '@/data/artists';
 import { music } from '@/data/music';
-import { X, Music, Users, Radio, Lightbulb } from 'lucide-react';
 import Link from 'next/link';
 
 const fadeUpVariant: Variants = {
@@ -29,12 +25,11 @@ const staggerContainer: Variants = {
 
 export default function Home() {
   const { t, language } = useLanguage();
-  const [selectedFocus, setSelectedFocus] = useState<Service | null>(null);
 
   return (
     <PageTransition>
       {/* EXCLUSIVE HERO SECTION */}
-      <section className="relative min-h-[90vh] md:min-h-screen flex items-center justify-center overflow-hidden bg-dark-slate text-pure-white pt-20 pb-12">
+      <section className="relative min-h-[90vh] md:min-h-screen flex items-center justify-center overflow-hidden bg-dark-slate text-pure-white pt-24 pb-16">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-b from-dark-slate/80 via-transparent to-dark-slate z-10" />
           <div className="absolute inset-0 bg-[url('/images/beground.png')] bg-cover bg-center opacity-30 mix-blend-luminosity scale-105 animate-[pulse_10s_ease-in-out_infinite]" />
@@ -45,17 +40,17 @@ export default function Home() {
           animate="visible"
           variants={{
             hidden: { opacity: 0 },
-            visible: { opacity: 1, transition: { staggerChildren: 0.05, delayChildren: 0.2 } }
+            visible: { opacity: 1, transition: { staggerChildren: 0.04, delayChildren: 0.2 } }
           }}
-          className="relative z-20 container mx-auto px-4 sm:px-6 text-center flex flex-col items-center"
+          className="relative z-20 container mx-auto px-4 sm:px-6 text-center flex flex-col items-center justify-center"
         >
-          <h1 className="font-display text-4xl sm:text-6xl md:text-7xl lg:text-9xl font-extrabold tracking-tighter uppercase text-mustard-gold drop-shadow-2xl leading-none">
-            <span className="block overflow-hidden pb-1 sm:pb-2">
+          <h1 className="font-display text-[clamp(1.75rem,7.5vw,4.5rem)] sm:text-6xl md:text-7xl lg:text-9xl font-extrabold tracking-tight uppercase text-mustard-gold drop-shadow-2xl leading-[1.15] sm:leading-none">
+            <span className="block whitespace-nowrap overflow-hidden pb-1 sm:pb-3">
               {"MUSIC BINTANG".split("").map((char, index) => (
                 <motion.span 
                   key={`line1-${index}`}
                   variants={{
-                    hidden: { opacity: 0, y: 80, rotate: 8 },
+                    hidden: { opacity: 0, y: 60, rotate: 6 },
                     visible: { opacity: 1, y: 0, rotate: 0, transition: { type: "spring", damping: 12, stiffness: 100 } }
                   }}
                   className="inline-block"
@@ -64,12 +59,12 @@ export default function Home() {
                 </motion.span>
               ))}
             </span>
-            <span className="block overflow-hidden pt-1 sm:pt-2">
+            <span className="block whitespace-nowrap overflow-hidden pt-1 sm:pt-3">
               {"PRODUCTION".split("").map((char, index) => (
                 <motion.span 
                   key={`line2-${index}`}
                   variants={{
-                    hidden: { opacity: 0, y: 80, rotate: 8 },
+                    hidden: { opacity: 0, y: 60, rotate: 6 },
                     visible: { opacity: 1, y: 0, rotate: 0, transition: { type: "spring", damping: 12, stiffness: 100 } }
                   }}
                   className="inline-block"
@@ -98,10 +93,8 @@ export default function Home() {
                 <div className="absolute inset-0 bg-[url('/images/studio.jpg')] bg-cover bg-center group-hover:scale-105 transition-transform duration-700" />
               </div>
               
-              {/* Optional aesthetic frame/overlay */}
               <div className="absolute inset-4 border border-white/20 rounded-xl z-10 pointer-events-none" />
               
-              {/* Label */}
               <div className="absolute bottom-6 left-6 z-20">
                 <span className="bg-mustard-gold text-dark-slate font-bold px-4 py-2 text-xs tracking-widest uppercase rounded-sm shadow-md">
                   Music Bintang
@@ -147,7 +140,6 @@ export default function Home() {
            </h2>
         </div>
         
-        {/* Auto Scrolling Marquee Container */}
         <div className="w-full overflow-hidden pb-4 md:pb-8 relative group">
           <motion.div 
             className="flex gap-4 sm:gap-6 w-max"
@@ -162,7 +154,6 @@ export default function Home() {
               >
                 <Link href={`/karya-musik/${item.id}`} className="block">
                   <div className="aspect-square bg-dark-slate overflow-hidden relative border border-white/10 rounded-lg">
-                     {/* Album Art */}
                      {item.coverImage ? (
                        <div 
                          className="absolute inset-0 bg-cover bg-center group-hover/card:scale-105 transition-transform duration-700"
@@ -176,7 +167,6 @@ export default function Home() {
                         <span className="font-display text-white text-xl sm:text-2xl font-bold uppercase line-clamp-2">{item.title}</span>
                         <span className="text-mustard-gold font-bold uppercase tracking-widest text-xs mt-2">{item.artistName}</span>
                      </div>
-                     {/* Temporary cover title (only if no image) */}
                      <div className="absolute inset-0 flex items-center justify-center p-4 group-hover/card:opacity-0 transition-opacity duration-300">
                         {!item.coverImage && (
                           <span className="font-display text-white text-2xl sm:text-3xl font-extrabold uppercase text-center drop-shadow-xl mix-blend-overlay">{item.title}</span>
@@ -215,10 +205,8 @@ export default function Home() {
                 >
                   <div className="absolute inset-0 bg-gradient-to-br from-dark-slate via-dark-grey to-black opacity-100 group-hover:scale-105 transition-transform duration-700 ease-out" />
                   
-                  {/* Dynamic Color Accent */}
                   <div className={`absolute -top-24 -right-24 w-48 h-48 rounded-full blur-3xl opacity-30 group-hover:opacity-60 transition-opacity duration-700 ${index % 2 === 0 ? 'bg-mustard-gold' : 'bg-logo-red'}`} />
 
-                  {/* Artist Image */}
                   {artist.image ? (
                     <div 
                       className="absolute inset-0 bg-cover group-hover:scale-105 transition-transform duration-700"
@@ -235,7 +223,6 @@ export default function Home() {
                     </div>
                   )}
 
-                  {/* Sleek Content Overlay at the bottom */}
                   <div className="absolute inset-x-0 bottom-0 p-5 md:p-6 flex flex-col justify-end bg-gradient-to-t from-black/95 via-black/60 to-transparent">
                     <p className="text-mustard-gold font-bold tracking-widest text-[10px] md:text-xs uppercase mb-1">
                       {language === 'ID' ? artist.role.id : artist.role.en}
