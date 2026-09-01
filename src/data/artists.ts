@@ -2,8 +2,8 @@ import { Artist } from '@/types';
 
 export const artists: Artist[] = [
   {
-    id: 'akda09',
-    name: 'AKDA09',
+    id: 'akasa-9',
+    name: 'AKASA 9',
     role: {
       id: 'Grup Band',
       en: 'Music Band'
@@ -16,7 +16,7 @@ export const artists: Artist[] = [
   },
   {
     id: 'bintang-putra-sugiatno',
-    name: 'BINTANG PUTRA SUGIATNO',
+    name: 'BINTANG PUTRA SUGIATno'.toUpperCase(),
     role: {
       id: 'Artis Pop / Produser',
       en: 'Pop Artist / Producer'
