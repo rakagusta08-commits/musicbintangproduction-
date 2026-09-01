@@ -22,6 +22,11 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Music Bintang Production — Music Production, Label & Artist Management",
   description: "Music Bintang Production is a professional music production, label and artist management company.",
+  icons: {
+    icon: "/logo.png",
+    shortcut: "/logo.png",
+    apple: "/logo.png",
+  },
 };
 
 export default function RootLayout({
