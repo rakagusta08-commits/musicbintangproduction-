@@ -76,22 +76,7 @@ export default function Home() {
           </h1>
         </motion.div>
 
-        {/* SUBTLE SCROLL PROMPT */}
-        <motion.div 
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.8, duration: 0.8 }}
-          className="relative z-20 flex flex-col items-center gap-1.5 pointer-events-none mt-auto"
-        >
-          <span className="text-[9px] sm:text-[10px] uppercase tracking-widest text-mustard-gold font-bold">Scroll Down</span>
-          <div className="w-4 h-6 sm:w-5 sm:h-8 rounded-full border border-white/25 flex items-start justify-center p-1">
-            <motion.div 
-              animate={{ y: [0, 8, 0] }}
-              transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-              className="w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full bg-mustard-gold"
-            />
-          </div>
-        </motion.div>
+        
       </section>
 
       {/* AESTHETIC INTRO / ABOUT SECTION */}
