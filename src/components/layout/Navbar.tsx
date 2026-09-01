@@ -3,7 +3,6 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
-import { LanguageSwitcher } from '../navigation/LanguageSwitcher';
 import { cn } from '@/lib/utils';
 import { useLanguage } from '@/lib/LanguageContext';
 import Image from 'next/image';
@@ -58,7 +57,7 @@ export const Navbar = () => {
         isHidden ? "-translate-y-full" : "translate-y-0"
       )}
     >
-      <div className="container mx-auto px-3 sm:px-6 lg:px-12 flex items-center justify-between gap-1.5 sm:gap-4 md:gap-8">
+      <div className="container mx-auto px-3 sm:px-6 lg:px-12 flex items-center justify-between gap-2 sm:gap-4 md:gap-8">
         
         {/* LOGO */}
         <Link href="/" className="flex items-center shrink-0 group">
@@ -82,7 +81,7 @@ export const Navbar = () => {
         </Link>
 
         {/* ALWAYS-VISIBLE HORIZONTAL NAV MENU */}
-        <nav className="flex items-center justify-center gap-1.5 xs:gap-2.5 sm:gap-5 md:gap-8 flex-nowrap shrink">
+        <nav className="flex items-center justify-center gap-2 xs:gap-3 sm:gap-6 md:gap-8 flex-nowrap">
           {links.map((link) => {
             const isActive = pathname === link.href || (link.href !== '/' && pathname.startsWith(link.href));
             return (
@@ -104,11 +103,6 @@ export const Navbar = () => {
             );
           })}
         </nav>
-
-        {/* LANGUAGE SWITCHER */}
-        <div className="flex items-center shrink-0 pl-1 sm:pl-2 border-l border-white/15 sm:border-transparent">
-          <LanguageSwitcher />
-        </div>
 
       </div>
     </header>
