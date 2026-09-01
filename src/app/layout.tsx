@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Montserrat, Inter } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
@@ -19,6 +19,13 @@ const inter = Inter({
   display: "swap",
 });
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: "#0A0A0A",
+};
+
 export const metadata: Metadata = {
   title: "Music Bintang Production — Music Production, Label & Artist Management",
   description: "Music Bintang Production is a professional music production, label and artist management company.",
@@ -36,10 +43,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="id" className={`${montserrat.variable} ${inter.variable}`}>
-      <body className="antialiased font-body bg-background text-foreground">
+      <body className="antialiased font-body bg-background text-foreground overflow-x-hidden min-h-screen flex flex-col">
         <LanguageProvider>
           <Navbar />
-          {children}
+          <main className="flex-grow w-full overflow-x-hidden">
+            {children}
+          </main>
           <Footer />
           <ScrollToTop />
         </LanguageProvider>
