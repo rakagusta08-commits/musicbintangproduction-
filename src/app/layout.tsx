@@ -30,17 +30,22 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://musicbintangproduction.vercel.app'),
   title: "Music Bintang Production — Music Production, Label & Artist Management",
   description: "Music Bintang Production adalah label rekaman, studio produksi musik, dan manajemen artis profesional di Indonesia.",
+  applicationName: "Music Bintang Production",
   verification: {
     google: "8154e121bddc9697",
   },
   icons: {
     icon: [
-      { url: "/newlogo.png", type: "image/png" },
+      { url: "/favicon-48x48.png", sizes: "48x48", type: "image/png" },
+      { url: "/favicon-96x96.png", sizes: "96x96", type: "image/png" },
+      { url: "/favicon-192x192.png", sizes: "192x192", type: "image/png" },
       { url: "/favicon.ico" },
+      { url: "/newlogo.png", type: "image/png" },
     ],
-    shortcut: "/newlogo.png",
+    shortcut: "/favicon-192x192.png",
     apple: [
-      { url: "/newlogo.png", sizes: "180x180", type: "image/png" }
+      { url: "/favicon-192x192.png", sizes: "192x192", type: "image/png" },
+      { url: "/newlogo.png", sizes: "512x512", type: "image/png" }
     ],
   },
   openGraph: {
@@ -72,17 +77,52 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://musicbintangproduction.vercel.app/#website",
+        "url": "https://musicbintangproduction.vercel.app",
+        "name": "Music Bintang Production",
+        "description": "Music Production, Label & Artist Management",
+        "publisher": {
+          "@id": "https://musicbintangproduction.vercel.app/#organization"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://musicbintangproduction.vercel.app/#organization",
+        "name": "Music Bintang Production",
+        "url": "https://musicbintangproduction.vercel.app",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://musicbintangproduction.vercel.app/favicon-512x512.png",
+          "width": 512,
+          "height": 512
+        }
+      }
+    ]
+  };
+
   return (
     <html lang="id" className={`${montserrat.variable} ${inter.variable}`}>
       <head>
-        <link rel="icon" href="/newlogo.png" type="image/png" />
-        <link rel="apple-touch-icon" href="/newlogo.png" />
+        <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png" />
+        <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+        <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png" />
+        <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/favicon-192x192.png" />
         <meta name="google-site-verification" content="8154e121bddc9697" />
         <meta property="og:image" content="https://musicbintangproduction.vercel.app/newlogo.png" />
         <meta property="og:image:secure_url" content="https://musicbintangproduction.vercel.app/newlogo.png" />
         <meta property="og:image:type" content="image/png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
       </head>
       <body className="antialiased font-body bg-background text-foreground overflow-x-hidden min-h-screen flex flex-col">
         <LanguageProvider>
