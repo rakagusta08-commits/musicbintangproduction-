@@ -27,7 +27,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://musicbintangproduction.vercel.app'),
+  metadataBase: new URL('https://musicbintangproduction.com'),
   title: "Music Bintang Production — Music Production, Label & Artist Management",
   description: "Music Bintang Production adalah label rekaman, studio produksi musik, dan manajemen artis profesional di Indonesia.",
   applicationName: "Music Bintang Production",
@@ -51,13 +51,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "id_ID",
-    url: "https://musicbintangproduction.vercel.app",
+    url: "https://musicbintangproduction.com",
     siteName: "Music Bintang Production",
     title: "Music Bintang Production — Record Label & Artist Management",
     description: "Rumah produksi musik, label rekaman, dan manajemen artis terkemuka di Indonesia.",
     images: [
       {
-        url: "https://musicbintangproduction.vercel.app/newlogo.png",
+        url: "https://musicbintangproduction.com/newlogo.png",
         width: 1200,
         height: 630,
         alt: "Music Bintang Production",
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Music Bintang Production",
     description: "Rumah produksi musik, label rekaman, dan manajemen artis.",
-    images: ["https://musicbintangproduction.vercel.app/newlogo.png"],
+    images: ["https://musicbintangproduction.com/newlogo.png"],
   },
 };
 
@@ -82,22 +82,22 @@ export default function RootLayout({
     "@graph": [
       {
         "@type": "WebSite",
-        "@id": "https://musicbintangproduction.vercel.app/#website",
-        "url": "https://musicbintangproduction.vercel.app",
+        "@id": "https://musicbintangproduction.com/#website",
+        "url": "https://musicbintangproduction.com",
         "name": "Music Bintang Production",
         "description": "Music Production, Label & Artist Management",
         "publisher": {
-          "@id": "https://musicbintangproduction.vercel.app/#organization"
+          "@id": "https://musicbintangproduction.com/#organization"
         }
       },
       {
         "@type": "Organization",
-        "@id": "https://musicbintangproduction.vercel.app/#organization",
+        "@id": "https://musicbintangproduction.com/#organization",
         "name": "Music Bintang Production",
-        "url": "https://musicbintangproduction.vercel.app",
+        "url": "https://musicbintangproduction.com",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://musicbintangproduction.vercel.app/favicon-512x512.png",
+          "url": "https://musicbintangproduction.com/favicon-512x512.png",
           "width": 512,
           "height": 512
         }
@@ -114,8 +114,8 @@ export default function RootLayout({
         <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png" />
         <link rel="apple-touch-icon" sizes="180x180" href="/favicon-192x192.png" />
         <meta name="google-site-verification" content="8154e121bddc9697" />
-        <meta property="og:image" content="https://musicbintangproduction.vercel.app/newlogo.png" />
-        <meta property="og:image:secure_url" content="https://musicbintangproduction.vercel.app/newlogo.png" />
+        <meta property="og:image" content="https://musicbintangproduction.com/newlogo.png" />
+        <meta property="og:image:secure_url" content="https://musicbintangproduction.com/newlogo.png" />
         <meta property="og:image:type" content="image/png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />

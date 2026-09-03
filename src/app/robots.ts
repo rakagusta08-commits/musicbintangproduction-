@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://musicbintangproduction.vercel.app/sitemap.xml',
+    sitemap: 'https://musicbintangproduction.com/sitemap.xml',
   };
 }

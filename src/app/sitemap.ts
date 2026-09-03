@@ -3,7 +3,7 @@ import { artists } from '@/data/artists';
 import { music } from '@/data/music';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://musicbintangproduction.vercel.app';
+  const baseUrl = 'https://musicbintangproduction.com';
 
   const staticRoutes: MetadataRoute.Sitemap = [
     { url: baseUrl, lastModified: new Date(), changeFrequency: 'weekly', priority: 1.0 },
