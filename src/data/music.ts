@@ -13,7 +13,7 @@ export const music: MusicWork[] = [
     youtubeId: 'ymYBjMYxvVw',
     coverImage: '/images/hancurhatikuu.png',
     links: {
-      spotify: 'https://open.spotify.com',
+      spotify: 'https://open.spotify.com/intl-id/track/5JW0f65xI64pKOC06wmb0W?si=f3144382bdd048d5',
       appleMusic: 'https://music.apple.com',
       youtube: 'https://www.youtube.com/watch?v=ymYBjMYxvVw',
       joox: 'https://joox.com'
@@ -31,7 +31,7 @@ export const music: MusicWork[] = [
     youtubeId: 'GvnnnD_AYlU',
     coverImage: '/images/indahpadawaktunya.png',
     links: {
-      spotify: 'https://open.spotify.com',
+      spotify: 'https://open.spotify.com/intl-id/track/28GB4qMf6vVZKF2eyHsXqf?si=048d5ad2c1ad4d87',
       appleMusic: 'https://music.apple.com',
       youtube: 'https://www.youtube.com/watch?v=GvnnnD_AYlU',
       joox: 'https://joox.com'
@@ -49,7 +49,7 @@ export const music: MusicWork[] = [
     youtubeId: 'uYldxBtQPjE',
     coverImage: '/images/sangpemimpi.png',
     links: {
-      spotify: 'https://open.spotify.com',
+      spotify: 'https://open.spotify.com/intl-id/track/2FDUIrV6rpLzTlaJIi2XCS?si=2caae1b28c284b62',
       appleMusic: 'https://music.apple.com',
       youtube: 'https://www.youtube.com/watch?v=uYldxBtQPjE'
     }
@@ -65,7 +65,7 @@ export const music: MusicWork[] = [
     },
     coverImage: '/images/tabir-ilusi.png',
     links: {
-      spotify: 'https://open.spotify.com',
+      spotify: 'https://open.spotify.com/intl-id/track/5240CnT7W6Mgh7kTPBfdIn?si=87696ba7a54d4d19',
       appleMusic: 'https://music.apple.com',
       youtube: 'https://youtube.com'
     }
@@ -81,7 +81,7 @@ export const music: MusicWork[] = [
     },
     coverImage: '/images/cintailahdiriku.png',
     links: {
-      spotify: 'https://open.spotify.com',
+      spotify: 'https://open.spotify.com/intl-id/track/4cV486NM0cpTefkLbsFX9K?si=c4ce3ca5b5a54443',
       appleMusic: 'https://music.apple.com',
       youtube: 'https://youtube.com'
     }
@@ -98,7 +98,7 @@ export const music: MusicWork[] = [
     youtubeId: 'c16Mu7TSOv0',
     coverImage: '/images/reinkarnasi.png',
     links: {
-      spotify: 'https://open.spotify.com',
+      spotify: 'https://open.spotify.com/intl-id/track/46PwCTp4Vuqh8MBSLfZW0z?si=67a5b8aa03964412',
       appleMusic: 'https://music.apple.com',
       youtube: 'https://www.youtube.com/watch?v=c16Mu7TSOv0',
       joox: 'https://joox.com'
@@ -116,7 +116,7 @@ export const music: MusicWork[] = [
     youtubeId: 'qHC9iP6wPoE',
     coverImage: '/images/healing.png',
     links: {
-      spotify: 'https://open.spotify.com',
+      spotify: 'https://open.spotify.com/intl-id/track/5Z893Gxp8zU5jsKFJSUEKs?si=f3f95e3cdc714092',
       appleMusic: 'https://music.apple.com',
       youtube: 'https://www.youtube.com/watch?v=qHC9iP6wPoE'
     }
